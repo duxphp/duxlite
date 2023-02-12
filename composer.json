@@ -7,11 +7,7 @@
     "slimphp"
   ],
   "require": {
-    "duxphp/lite": "dev-main",
-    "xantios/mimey": "^2.2",
-    "yansongda/pay": "^3.2",
-    "swow/swow": "^1.1",
-    "overtrue/easy-sms": "^2.3"
+    "duxphp/lite": "dev-main"
   },
   "autoload": {
     "psr-4": {
