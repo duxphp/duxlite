@@ -1,0 +1,17 @@
+db:
+  drivers:
+    default:
+      driver: mysql
+      host: localhost
+      database: slim
+      username: root
+      password:
+      port: 3306
+      prefix: app_
+redis:
+  drivers:
+    default:
+      host: 127.0.0.1
+      port: 6379
+      timeout: 2.5
+      auth:

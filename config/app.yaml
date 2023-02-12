@@ -1,0 +1,7 @@
+app:
+    name: DuxPHP
+    debug: true
+    cache: false
+    secret: supersecretkeyyoushouldnotcommittogithub
+    domain: 'http://duxlite.test'
+registers:

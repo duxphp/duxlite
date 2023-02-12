@@ -1,1 +1,1 @@
-# duxlite
+#slim
