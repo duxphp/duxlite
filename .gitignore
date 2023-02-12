@@ -2,7 +2,6 @@
 logs
 data
 vendor
-public/uploads
 composer.lock
 
 # duxweb
