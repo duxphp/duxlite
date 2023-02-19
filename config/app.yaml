@@ -2,6 +2,6 @@ app:
     name: DuxPHP
     debug: true
     cache: false
-    secret: supersecretkeyyoushouldnotcommittogithub
-    domain: 'http://duxlite.test'
+    secret: 44750d4a626b615219794c9c27e966bf
+    domain: 'http://dux-lite.test'
 registers:
