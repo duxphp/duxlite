@@ -1,6 +1,7 @@
 {
   "name": "duxphp/duxlite",
   "type": "project",
+  "minimum-stability": "dev",
   "description": "Lightweight project development system",
   "keywords": [
     "duxphp",
