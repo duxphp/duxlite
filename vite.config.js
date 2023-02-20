@@ -7,6 +7,7 @@ import { resolve } from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   root: resolve(__dirname, 'client'),
+  base: '/client/',
   plugins: [
     react(),
     duxweb(),
