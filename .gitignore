@@ -2,7 +2,6 @@
 logs
 data
 vendor
-composer.lock
 
 # duxweb
 client/autoInit.js
