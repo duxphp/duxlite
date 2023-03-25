@@ -1,0 +1,7 @@
+app:
+  name: DuxPHP
+  debug: true
+  cache: false
+  secret: 44750d4a626b615219494c9c27e96664
+  domain: 'http://0.0.0.0:8080'
+  websocket: 'wss://0.0.0.0:8080/ws'

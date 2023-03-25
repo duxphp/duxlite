@@ -1,39 +1,24 @@
 <?php
 
-namespace tests;
-use Psr\Http\Message\ServerRequestInterface as Request;
-use Slim\Psr7\Factory\StreamFactory;
-use Slim\Psr7\Headers;
-use Slim\Psr7\Request as SlimRequest;
-use Slim\Psr7\Uri;
+namespace Tests;
 
-class TestCase extends \PHPUnit\Framework\TestCase {
+use Nekofar\Slim\Test\Traits\AppTestTrait;
+use PHPUnit\Framework\TestCase as BaseTestCase;
 
-    public function setUp(): void {
-        \Dux\App::create(__DIR__ . '/..');
-        \Dux\App::db()->getConnection()->beginTransaction();
+class TestCase extends BaseTestCase
+{
+    use AppTestTrait;
+
+    protected function setUp(): void
+    {
+        $app = \Dux\App::create(dirname(__DIR__));
+        $this->setUpApp($app->web);
     }
 
-    public function tearDown(): void {
-        \Dux\App::db()->getConnection()->rollBack();
+    public function testHomePage(): void
+    {
+        $this->get('/')
+            ->assertOk()
+            ->assertSee('Welcome');
     }
-
-    protected function createRequest(
-        string $method,
-        string $path,
-        array $headers = ['HTTP_ACCEPT' => 'application/json'],
-        array $cookies = [],
-        array $serverParams = []
-    ): Request {
-        $uri = new Uri('', '', 80, $path);
-        $handle = fopen('php://temp', 'w+');
-        $stream = (new StreamFactory())->createStreamFromResource($handle);
-
-        $h = new Headers();
-        foreach ($headers as $name => $value) {
-            $h->addHeader($name, $value);
-        }
-        return new SlimRequest($method, $uri, $h, $cookies, $serverParams, $stream);
-    }
-
 }
