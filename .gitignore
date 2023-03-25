@@ -7,6 +7,7 @@ vendor
 client/autoInit.js
 client/dist
 client/app
+config/*.dev.yaml
 
 # compiled output
 /dist
