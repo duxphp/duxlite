@@ -1,11 +1,7 @@
-import config from './config/request'
 import { requestConfig, requestMiddle, uploadMiddle, user } from 'duxweb'
-import { Message } from '@arco-design/web-react';
+import { Message } from '@arco-design/web-react'
 
 requestConfig({
-  request: {
-    origin: config.origin
-  },
   upload: {
     defaultDrive: 'qiniu'
   }
